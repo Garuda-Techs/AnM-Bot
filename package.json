@@ -15,9 +15,5 @@
   "bugs": {
     "url": "https://github.com/Garuda-HC-Techs/AnM-Bot/issues"
   },
-  "homepage": "https://github.com/Garuda-HC-Techs/AnM-Bot#readme",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.19.2"
-  }
+  "homepage": "https://github.com/Garuda-HC-Techs/AnM-Bot#readme"
 }

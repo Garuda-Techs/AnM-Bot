@@ -1,8 +1,9 @@
 import csv
 import logging
-import os
-import firebase_admin
 
+import os
+
+import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))

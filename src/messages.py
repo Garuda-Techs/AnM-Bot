@@ -1,12 +1,14 @@
-WELCOME_TEXT = 'The conversation will only start when both sides have started the bot.\n\n'
+WELCOME_TEXT = 'Welcome to GARUDA ANGEL AND MORTAL! You can use this bot to chat with your angel/mortal. \
+                \nThe conversation will only start when both sides have started the bot.\n\n'
 HELP_TEXT = (
     'This bot supports only text, photos, stickers, documents, audio, video, and animations.'
     '\n\nPlease note that a message from an Angel will be prefaced by an angel and a message from a mortal will be prefaced by a human.  DO NOT MIX UP YOUR CHATS!!!'
     '\n\nThe messages will not be recorded. The conversation will automatically end after the event.'
     '\n\nUse /help if you want to see this message again.'
 )
-ERROR_CHAT_ID = 'Sorry an error occured please type /start again.'
-NOT_REGISTERED = 'Sorry you are not registered with the bot currently.'
+ERROR_CHAT_ID = 'An error occurred! Please type /start again.'
+NOT_REGISTERED = 'Oops, we couldn\'t find your username in our records. \
+                  If you had signed up for A&M and believe this is an error, please let the admins (@frymash, @Mart0ut, and @zozibo) know.'
 PARTNER_UNAVAILABLE_MORTAL = 'You have started the chat but your mortal has not joined.'
 PARTNER_UNAVAILABLE_ANGEL = 'You have started the chat but your angel has not joined.'
 PARTNER_AVAILABLE_MORTAL = 'You have joined the chat and are now chatting with your mortal.'

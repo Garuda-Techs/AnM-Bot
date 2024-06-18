@@ -5,7 +5,9 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 from dotenv import load_dotenv
+from uploader import upload_data_to_firestore
 
+print('PLAYER.PY BEGINS EXECUTION')
 load_dotenv()
 logger = logging.getLogger(__name__)
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -13,7 +15,11 @@ PARENT_DIR = os.path.join(FILE_DIR, os.pardir)
 dir = os.path.join(PARENT_DIR, 'src/creds.json')
 pyers = os.path.join(PARENT_DIR, os.environ['CSV_PATH'])
 cred = credentials.Certificate(dir)
-app = firebase_admin.initialize_app(cred)
+# if not firebase_admin._apps:
+#     print("Initalising Firebase app...")
+#     app = firebase_admin.initialize_app(cred)
+# else:
+#     print("Firebase app already initialised. Continuing execution.")
 db = firestore.client()
 dbName = os.environ['DB_PATH']
 
@@ -52,14 +58,26 @@ def loadPlayers(players: dict) -> str:
                 playerName = row[0].strip().lower()
                 partnerName = row[1].strip().lower()
 
-                for doc in db.collection(dbName).where(u'username',u'==',playerName).stream(): player = doc.to_dict()
+                for doc in db.collection(dbName).where(u'username',u'==',playerName).stream(): 
+                    player = doc.to_dict()
+                    
+                try:
+                    players[playerName].username = playerName
+                    players[playerName].partner = players[partnerName]
+                    players[playerName].chat_id = player["chatId"]
+                    players[playerName].isAngel = True
+                # players[playerName].chat_id = player["chatId"] will throw an UnboundLocalError
+                # if a Firestore document wasn't assigned to player in the previous for loop
+                # To handle this error, 
+                except UnboundLocalError:
+                    print(f'{playerName} could not be found in Firestore. \
+                        This likely means the Firestore Database is outdated. \
+                        Re-uploading CSV to Firestore...')
+                    upload_data_to_firestore()
+                    loadPlayers()
 
-                players[playerName].username = playerName
-                players[playerName].partner = players[partnerName]
-                players[playerName].chat_id = player["chatId"]
-                players[playerName].isAngel = True
-
-                for doc in db.collection(dbName).where(u'username',u'==',partnerName).stream(): partner = doc.to_dict()
+                for doc in db.collection(dbName).where(u'username',u'==',partnerName).stream(): 
+                    partner = doc.to_dict()
 
                 players[partnerName].username = partnerName
                 players[partnerName].partner = players[playerName]
@@ -79,7 +97,7 @@ def loadPlayers(players: dict) -> str:
 def validatePairings(players: dict) -> str:
     for _, player in players.items():
         if player.partner.partner.username != player.username:
-            logger.error(f'Error with {player.username} pairings. Please check the csv file and try again.')
-            return f'Error with {player.username} pairings.'
+            logger.error(f'Error with {player.username}\'s pairings. Please check the csv file and try again.')
+            return f'Error with {player.username}\'s pairings. Please check the csv file and try again.'
     logger.info('Validation complete. There are no issues with pairings.')
     return 'Validation complete. There are no issues with pairings.'

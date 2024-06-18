@@ -1,12 +1,12 @@
 import os
-import player
+import player # executes unabstracted code in player.py
 import messages
 import logging
 from collections import defaultdict
 from telegram import Update, constants
-from telegram.ext import Application, Updater, CommandHandler, MessageHandler, filters, CallbackContext, ConversationHandler
+from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext, ConversationHandler
 
-
+print('BOT.PY BEGINS EXECUTION')
 # Enable logging.
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
@@ -205,7 +205,6 @@ def main():
     #                 url_path=BOT_TOKEN,
     #                 webhook_url=WEBHOOK_URL)
     app.run_polling(poll_interval=1)
-
 
     # updater.start_webhook(listen="0.0.0.0",
     #                       port=int(os.environ.get('PORT', 5000)),

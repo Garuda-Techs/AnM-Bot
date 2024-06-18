@@ -1,11 +1,12 @@
 import csv
 import logging
 import os
-
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+from dotenv import load_dotenv
 
+load_dotenv()
 logger = logging.getLogger(__name__)
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 PARENT_DIR = os.path.join(FILE_DIR, os.pardir)

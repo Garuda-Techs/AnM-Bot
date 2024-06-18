@@ -4,7 +4,7 @@ import messages
 import logging
 from collections import defaultdict
 from telegram import Update, constants
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext, ConversationHandler
+from telegram.ext import Application, Updater, CommandHandler, MessageHandler, filters, CallbackContext, ConversationHandler
 
 
 # Enable logging.
@@ -183,29 +183,36 @@ def angelOrMortal(playerName, message) -> str:
 
 def main():
     BOT_TOKEN = os.environ['BOT_TOKEN']
-    WEBHOOK_URL = os.environ['WEBHOOK_URL']
+    # WEBHOOK_URL = os.environ['WEBHOOK_URL']
 
     logger.info(player.loadPlayers(players))
-    updater = Updater(BOT_TOKEN,use_context=True)
-    dispatcher = updater.dispatcher
+    # updater = Updater(BOT_TOKEN,use_context=True)
+    app = Application.builder().token(BOT_TOKEN).build()
 
     # User commands
-    dispatcher.add_handler(CommandHandler("start", start_command))
-    dispatcher.add_handler(CommandHandler("help", help_command))
-    dispatcher.add_handler(MessageHandler(~Filters.command & ~Filters.document.file_extension("csv"), send_msg_command))
+    app.add_handler(CommandHandler("start", start_command))
+    app.add_handler(CommandHandler("help", help_command))
+    app.add_handler(MessageHandler(~filters.COMMAND & ~filters.Document.FileExtension("csv"), send_msg_command))
 
     # Admin commands.
-    dispatcher.add_handler(CommandHandler("admin", admin_command))
-    dispatcher.add_handler(CommandHandler("reload", reload_command))
-    dispatcher.add_handler(CommandHandler("reset", reset_command))
-    dispatcher.add_handler(MessageHandler(Filters.document.file_extension("csv"), upload_command))
+    app.add_handler(CommandHandler("admin", admin_command))
+    app.add_handler(CommandHandler("reload", reload_command))
+    app.add_handler(CommandHandler("reset", reset_command))
+    app.add_handler(MessageHandler(filters.Document.FileExtension("csv"), upload_command))
+    
+    # app.run_webhook(listen="0.0.0.0",
+    #                 port=int(os.environ.get('PORT', 5000)),
+    #                 url_path=BOT_TOKEN,
+    #                 webhook_url=WEBHOOK_URL)
+    app.run_polling(poll_interval=1)
 
-    updater.start_webhook(listen="0.0.0.0",
-                          port=int(os.environ.get('PORT', 5000)),
-                          url_path=BOT_TOKEN,
-                          webhook_url=WEBHOOK_URL)
-    #updater.start_polling()
-    updater.idle()
+
+    # updater.start_webhook(listen="0.0.0.0",
+    #                       port=int(os.environ.get('PORT', 5000)),
+    #                       url_path=BOT_TOKEN,
+    #                       webhook_url=WEBHOOK_URL)
+    # #updater.start_polling()
+    # updater.idle()
 
 
 if __name__ == '__main__':

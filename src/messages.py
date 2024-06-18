@@ -1,5 +1,5 @@
 WELCOME_TEXT = 'Welcome to GARUDA ANGEL AND MORTAL! You can use this bot to chat with your angel/mortal. \
-                \nThe conversation will only start when both sides have started the bot.\n\n'
+                The conversation will only start when both sides have started the bot.\n\n'
 HELP_TEXT = (
     'This bot supports only text, photos, stickers, documents, audio, video, and animations.'
     '\n\nPlease note that a message from an Angel will be prefaced by an angel and a message from a mortal will be prefaced by a human.  DO NOT MIX UP YOUR CHATS!!!'

@@ -1,7 +1,6 @@
 import csv
 import logging
 import os
-import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 from dotenv import load_dotenv
@@ -15,11 +14,6 @@ PARENT_DIR = os.path.join(FILE_DIR, os.pardir)
 dir = os.path.join(PARENT_DIR, 'src/creds.json')
 pyers = os.path.join(PARENT_DIR, os.environ['CSV_PATH'])
 cred = credentials.Certificate(dir)
-# if not firebase_admin._apps:
-#     print("Initalising Firebase app...")
-#     app = firebase_admin.initialize_app(cred)
-# else:
-#     print("Firebase app already initialised. Continuing execution.")
 db = firestore.client()
 dbName = os.environ['DB_PATH']
 

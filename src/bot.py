@@ -6,6 +6,10 @@ from collections import defaultdict
 from telegram import Update, constants
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext, ConversationHandler
 
+ANGEL_EMOJI = '\U0001F607'
+HUMAN_EMOJI = '\U0001F476'
+PORT = int(os.environ.get('PORT', '8443'))
+
 print('BOT.PY BEGINS EXECUTION')
 # Enable logging.
 logging.basicConfig(
@@ -159,15 +163,15 @@ async def reset_command(update: Update, context: CallbackContext) -> None:
 def angelOrMortal(playerName, message) -> str:
     if players[playerName].isAngel:
         if message.text:
-            message = '\U0001F607' + str(message.text or '')
+            message = ANGEL_EMOJI + str(message.text or '')
         else:
-            message = '\U0001F607' + str(message.caption or '')
+            message = ANGEL_EMOJI + str(message.caption or '')
         return message
     else:
         if message.text:
-            message = '\U0001F476' + str(message.text or '')
+            message = HUMAN_EMOJI + str(message.text or '')
         else:
-            message = '\U0001F476' + str(message.caption or '')
+            message = HUMAN_EMOJI + str(message.caption or '')
         return message   
 
 def main():
@@ -189,18 +193,12 @@ def main():
     app.add_handler(CommandHandler("reset", reset_command))
     app.add_handler(MessageHandler(filters.Document.FileExtension("csv"), upload_command))
     
+    # Extract port from environment
     # app.run_webhook(listen="0.0.0.0",
-    #                 port=int(os.environ.get('PORT', 5000)),
+    #                 port=int(os.environ.get('PORT', 8443)),
     #                 url_path=BOT_TOKEN,
     #                 webhook_url=WEBHOOK_URL)
     app.run_polling(poll_interval=1)
-
-    # updater.start_webhook(listen="0.0.0.0",
-    #                       port=int(os.environ.get('PORT', 5000)),
-    #                       url_path=BOT_TOKEN,
-    #                       webhook_url=WEBHOOK_URL)
-    # #updater.start_polling()
-    # updater.idle()
 
 if __name__ == '__main__':
     try:

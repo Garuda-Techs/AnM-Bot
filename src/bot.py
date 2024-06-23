@@ -163,20 +163,20 @@ async def reset_command(update: Update, context: CallbackContext) -> None:
 def angelOrMortal(playerName, message) -> str:
     if players[playerName].isAngel:
         if message.text:
-            message = ANGEL_EMOJI + str(message.text or '')
+            message = ANGEL_EMOJI + " " + str(message.text or '')
         else:
-            message = ANGEL_EMOJI + str(message.caption or '')
+            message = ANGEL_EMOJI + " " + str(message.caption or '')
         return message
     else:
         if message.text:
-            message = HUMAN_EMOJI + str(message.text or '')
+            message = HUMAN_EMOJI + " " + str(message.text or '')
         else:
-            message = HUMAN_EMOJI + str(message.caption or '')
+            message = HUMAN_EMOJI + " " + str(message.caption or '')
         return message   
 
 def main():
     BOT_TOKEN = os.environ['BOT_TOKEN']
-    # WEBHOOK_URL = os.environ['WEBHOOK_URL']
+    WEBHOOK_URL = os.environ['WEBHOOK_URL']
 
     logger.info(player.loadPlayers(players))
     # updater = Updater(BOT_TOKEN,use_context=True)
@@ -195,7 +195,7 @@ def main():
     
     # Extract port from environment
     app.run_webhook(listen="0.0.0.0",
-                    port=int(os.environ.get('PORT', 8443)),
+                    port=PORT,
                     url_path=BOT_TOKEN,
                     webhook_url=WEBHOOK_URL)
     # app.run_polling(poll_interval=1)

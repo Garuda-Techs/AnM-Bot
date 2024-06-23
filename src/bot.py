@@ -196,7 +196,6 @@ def main():
     # Extract port from environment
     app.run_webhook(listen="0.0.0.0",
                     port=PORT,
-                    url_path=BOT_TOKEN,
                     webhook_url=WEBHOOK_URL)
     # app.run_polling(poll_interval=1)
 

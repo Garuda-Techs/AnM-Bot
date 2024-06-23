@@ -194,11 +194,11 @@ def main():
     app.add_handler(MessageHandler(filters.Document.FileExtension("csv"), upload_command))
     
     # Extract port from environment
-    # app.run_webhook(listen="0.0.0.0",
-    #                 port=int(os.environ.get('PORT', 8443)),
-    #                 url_path=BOT_TOKEN,
-    #                 webhook_url=WEBHOOK_URL)
-    app.run_polling(poll_interval=1)
+    app.run_webhook(listen="0.0.0.0",
+                    port=int(os.environ.get('PORT', 8443)),
+                    url_path=BOT_TOKEN,
+                    webhook_url=WEBHOOK_URL)
+    # app.run_polling(poll_interval=1)
 
 if __name__ == '__main__':
     try:

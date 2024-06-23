@@ -4,10 +4,11 @@ import os
 from firebase_admin import credentials
 from firebase_admin import firestore
 from dotenv import load_dotenv
-from uploader import upload_data_to_firestore
+from uploader import initialise_firestore, upload_data_to_firestore
 
 print('PLAYER.PY BEGINS EXECUTION')
 load_dotenv()
+initialise_firestore()
 logger = logging.getLogger(__name__)
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 PARENT_DIR = os.path.join(FILE_DIR, os.pardir)

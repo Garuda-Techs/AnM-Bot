@@ -1,0 +1,103 @@
+
+ ~/Desktop/AnM-Bot  PTB-v21.3-update  heroku logs --tail                                                    ok  5s  %  11:22:25 pm
+2024-06-23T15:10:21.407127+00:00 app[web.1]: 2024-06-23 15:10:21,406 - player - INFO - Angel frymash has Mortal zozibo.
+2024-06-23T15:10:21.870731+00:00 app[web.1]: 2024-06-23 15:10:21,870 - player - INFO - Angel martout has Mortal trolloy.
+2024-06-23T15:10:21.870795+00:00 app[web.1]: 2024-06-23 15:10:21,870 - player - INFO - Processed 3 lines.
+2024-06-23T15:10:21.870835+00:00 app[web.1]: 2024-06-23 15:10:21,870 - player - INFO - Validation complete. There are no issues with pairings.
+2024-06-23T15:10:21.870874+00:00 app[web.1]: 2024-06-23 15:10:21,870 - __main__ - INFO - Column names are Angel, Mortal.
+2024-06-23T15:10:21.870874+00:00 app[web.1]:
+2024-06-23T15:10:21.870875+00:00 app[web.1]: Angel frymash has Mortal zozibo.
+2024-06-23T15:10:21.870875+00:00 app[web.1]: Angel martout has Mortal trolloy.
+2024-06-23T15:10:21.870876+00:00 app[web.1]:
+2024-06-23T15:10:21.870876+00:00 app[web.1]: Processed 3 lines.
+2024-06-23T15:10:21.870877+00:00 app[web.1]: Validation complete. There are no issues with pairings.
+2024-06-23T15:10:22.274280+00:00 app[web.1]: 2024-06-23 15:10:22,274 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/getMe "HTTP/1.1 200 OK"
+2024-06-23T15:10:22.362440+00:00 app[web.1]: 2024-06-23 15:10:22,358 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/setWebhook "HTTP/1.1 200 OK"
+2024-06-23T15:10:22.367580+00:00 app[web.1]: 2024-06-23 15:10:22,367 - telegram.ext.Application - INFO - Application started
+2024-06-23T15:10:22.463964+00:00 heroku[web.1]: State changed from starting to up
+2024-06-23T15:10:33.786701+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=9964090d-74f8-4ce3-9fe2-7deeb757c02e fwd="91.108.6.66" dyno=web.1 connect=0ms service=2ms status=200 bytes=172 protocol=https
+2024-06-23T15:10:34.244122+00:00 app[web.1]: 2024-06-23 15:10:34,243 - __main__ - INFO - frymash started the bot with chat_id 37163849.
+2024-06-23T15:10:34.246908+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=f1fb98a7-af72-4caa-8abf-9229fa4bbbd1 fwd="91.108.6.66" dyno=web.1 connect=0ms service=374ms status=200 bytes=172 protocol=https
+2024-06-23T15:10:34.334325+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=ff21bbb7-3259-4080-b8b4-73593af9f46d fwd="91.108.6.66" dyno=web.1 connect=0ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:10:34.964162+00:00 app[web.1]: 2024-06-23 15:10:34,964 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:10:35.445651+00:00 app[web.1]: 2024-06-23 15:10:35,445 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:10:35.906887+00:00 app[web.1]: 2024-06-23 15:10:35,906 - __main__ - INFO - frymash started the bot with chat_id 37163849.
+2024-06-23T15:10:36.417289+00:00 app[web.1]: 2024-06-23 15:10:36,417 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:10:36.912397+00:00 app[web.1]: 2024-06-23 15:10:36,912 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:10:37.357890+00:00 app[web.1]: 2024-06-23 15:10:37,357 - __main__ - INFO - frymash started the bot with chat_id 37163849.
+2024-06-23T15:10:38.081597+00:00 app[web.1]: 2024-06-23 15:10:38,081 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:10:38.660463+00:00 app[web.1]: 2024-06-23 15:10:38,660 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:11:25.252854+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=61d47f23-f287-46fe-8f62-f6455fbeee46 fwd="91.108.6.66" dyno=web.1 connect=0ms service=2ms status=200 bytes=172 protocol=https
+2024-06-23T15:11:25.730838+00:00 app[web.1]: 2024-06-23 15:11:25,730 - __main__ - INFO - frymash started the bot with chat_id 37163849.
+2024-06-23T15:11:26.401021+00:00 app[web.1]: 2024-06-23 15:11:26,400 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:11:27.075441+00:00 app[web.1]: 2024-06-23 15:11:27,075 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:14:48.591525+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=55d82485-8b2d-43e7-a769-336aee1a9f93 fwd="91.108.6.66" dyno=web.1 connect=1ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:14:49.071048+00:00 app[web.1]: 2024-06-23 15:14:49,070 - __main__ - INFO - zozibo started the bot with chat_id 600671508.
+2024-06-23T15:14:49.888635+00:00 app[web.1]: 2024-06-23 15:14:49,888 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:14:50.584833+00:00 app[web.1]: 2024-06-23 15:14:50,584 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:14:51.083553+00:00 app[web.1]: 2024-06-23 15:14:51,083 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:15:06.269420+00:00 app[web.1]: 2024-06-23 15:15:06,269 - __main__ - INFO - send msg command
+2024-06-23T15:15:06.269491+00:00 app[web.1]: 2024-06-23 15:15:06,269 - __main__ - INFO - sending message here
+2024-06-23T15:15:06.269492+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=0a8fbb15-a8d0-4b82-bb64-6acfbe467d8f fwd="91.108.6.66" dyno=web.1 connect=0ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:15:07.015956+00:00 app[web.1]: 2024-06-23 15:15:07,014 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:15:09.801720+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=213eaf28-0097-4f8e-863f-ec41b7b8feef fwd="91.108.6.66" dyno=web.1 connect=0ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:15:09.801737+00:00 app[web.1]: 2024-06-23 15:15:09,801 - __main__ - INFO - send msg command
+2024-06-23T15:15:09.801859+00:00 app[web.1]: 2024-06-23 15:15:09,801 - __main__ - INFO - sending message here
+2024-06-23T15:15:10.306335+00:00 app[web.1]: 2024-06-23 15:15:10,306 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:15:15.326163+00:00 app[web.1]: 2024-06-23 15:15:15,326 - __main__ - INFO - send msg command
+2024-06-23T15:15:15.326239+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=1ed905e7-ee7b-40d3-ae93-3ad3ebe07e4e fwd="91.108.6.66" dyno=web.1 connect=0ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:15:15.326262+00:00 app[web.1]: 2024-06-23 15:15:15,326 - __main__ - INFO - sending message here
+2024-06-23T15:15:16.084774+00:00 app[web.1]: 2024-06-23 15:15:16,084 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:15:22.096735+00:00 app[web.1]: 2024-06-23 15:15:22,096 - __main__ - INFO - send msg command
+2024-06-23T15:15:22.096809+00:00 app[web.1]: 2024-06-23 15:15:22,096 - __main__ - INFO - sending message here
+2024-06-23T15:15:22.096835+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=f7cc6cf8-0839-4f2a-bc7e-9e3060f494ea fwd="91.108.6.66" dyno=web.1 connect=0ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:15:23.237666+00:00 app[web.1]: 2024-06-23 15:15:23,237 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:15:28.036373+00:00 app[web.1]: 2024-06-23 15:15:28,036 - __main__ - INFO - send msg command
+2024-06-23T15:15:28.036428+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=aef0c4a9-b243-4a88-987e-640e4654048d fwd="91.108.6.66" dyno=web.1 connect=0ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:15:28.036448+00:00 app[web.1]: 2024-06-23 15:15:28,036 - __main__ - INFO - sending message here
+2024-06-23T15:15:28.511961+00:00 app[web.1]: 2024-06-23 15:15:28,511 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:15:39.339314+00:00 app[web.1]: 2024-06-23 15:15:39,339 - __main__ - INFO - send msg command
+2024-06-23T15:15:39.339383+00:00 app[web.1]: 2024-06-23 15:15:39,339 - __main__ - INFO - sending message here
+2024-06-23T15:15:39.339460+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=47906e07-b8a9-40a2-9df1-e7f8dca07d20 fwd="91.108.6.66" dyno=web.1 connect=1ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:15:40.010201+00:00 app[web.1]: 2024-06-23 15:15:40,010 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:16:02.872668+00:00 app[web.1]: 2024-06-23 15:16:02,872 - __main__ - INFO - send msg command
+2024-06-23T15:16:02.872676+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=d517b364-0529-4efa-a947-0d09749e5c91 fwd="91.108.6.66" dyno=web.1 connect=0ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:16:02.872749+00:00 app[web.1]: 2024-06-23 15:16:02,872 - __main__ - INFO - sending message here
+2024-06-23T15:16:03.720316+00:00 app[web.1]: 2024-06-23 15:16:03,720 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:16:16.733462+00:00 app[web.1]: 2024-06-23 15:16:16,733 - __main__ - INFO - send msg command
+2024-06-23T15:16:16.733536+00:00 app[web.1]: 2024-06-23 15:16:16,733 - __main__ - INFO - sending message here
+2024-06-23T15:16:16.733557+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=2d629bb3-f628-4070-be39-32c4bf857f83 fwd="91.108.6.66" dyno=web.1 connect=1ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:16:17.553055+00:00 app[web.1]: 2024-06-23 15:16:17,552 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendVoice "HTTP/1.1 200 OK"
+2024-06-23T15:16:23.533224+00:00 app[web.1]: 2024-06-23 15:16:23,533 - __main__ - INFO - send msg command
+2024-06-23T15:16:23.533288+00:00 app[web.1]: 2024-06-23 15:16:23,533 - __main__ - INFO - sending message here
+2024-06-23T15:16:23.533600+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=547cff02-e772-432a-b09f-6f626bbf71e3 fwd="91.108.6.66" dyno=web.1 connect=0ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:16:23.534401+00:00 app[web.1]: 2024-06-23 15:16:23,533 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+2024-06-23T15:16:23.534401+00:00 app[web.1]: Traceback (most recent call last):
+2024-06-23T15:16:23.534402+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.12/site-packages/telegram/ext/_application.py", line 1325, in process_update
+2024-06-23T15:16:23.534403+00:00 app[web.1]: await coroutine
+2024-06-23T15:16:23.534403+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.12/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+2024-06-23T15:16:23.534403+00:00 app[web.1]: return await self.callback(update, context)
+2024-06-23T15:16:23.534403+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-23T15:16:23.534404+00:00 app[web.1]: File "/app/src/bot.py", line 137, in send_msg_command
+2024-06-23T15:16:23.534404+00:00 app[web.1]: await sendNonTextMessage(message, context.bot, players[playerName].partner.chat_id, messageText)
+2024-06-23T15:16:23.534404+00:00 app[web.1]: File "/app/src/bot.py", line 98, in sendNonTextMessage
+2024-06-23T15:16:23.534404+00:00 app[web.1]: await bot.send_video_note(
+2024-06-23T15:16:23.534405+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^
+2024-06-23T15:16:23.534405+00:00 app[web.1]: TypeError: ExtBot.send_video_note() got an unexpected keyword argument 'caption'
+2024-06-23T15:17:57.723195+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=e8fc04cc-51af-4e65-bbd6-b550ca97ff5a fwd="91.108.6.66" dyno=web.1 connect=1ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:17:57.723476+00:00 app[web.1]: /app/src/bot.py:29: RuntimeWarning: coroutine 'Message.reply_text' was never awaited
+2024-06-23T15:17:57.723545+00:00 app[web.1]: update.message.reply_text(messages.NOT_REGISTERED)
+2024-06-23T15:17:57.723546+00:00 app[web.1]: RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+2024-06-23T15:18:05.471938+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=8bb4022f-c29d-4c84-9bf4-74d4d4521c77 fwd="91.108.6.66" dyno=web.1 connect=0ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:18:54.660633+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=51356c09-5369-482d-94b1-d4ca7098c25c fwd="91.108.6.66" dyno=web.1 connect=0ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:18:56.224458+00:00 app[web.1]: 2024-06-23 15:18:56,224 - __main__ - INFO - trolloy started the bot with chat_id 577928877.
+2024-06-23T15:18:56.998134+00:00 app[web.1]: 2024-06-23 15:18:56,997 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:18:57.480773+00:00 app[web.1]: 2024-06-23 15:18:57,480 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7312391576:AAHPd6PKyhENDE-nRD1-9_vNDb5fAnLxx9I/sendMessage "HTTP/1.1 200 OK"
+2024-06-23T15:19:00.892527+00:00 heroku[router]: at=info method=POST path="/" host=anm-bot-821243236f4d.herokuapp.com request_id=f7335259-9b72-4100-8e41-75db6c12c7e5 fwd="91.108.6.66" dyno=web.1 connect=1ms service=1ms status=200 bytes=172 protocol=https
+2024-06-23T15:22:24.195849+00:00 heroku[web.1]: State changed from up to down
+2024-06-23T15:22:25.022600+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2024-06-23T15:22:25.048969+00:00 app[web.1]: 2024-06-23 15:22:25,048 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2024-06-23T15:22:25.049136+00:00 app[web.1]: 2024-06-23 15:22:25,049 - telegram.ext.Application - INFO - Application.stop() complete
+2024-06-23T15:22:25.051114+00:00 app[web.1]: 2024-06-23 15:22:25,050 - __main__ - INFO - Bot has terminated.
+2024-06-23T15:22:25.222849+00:00 heroku[web.1]: Process exited with status 0
+2024-06-23T15:22:23.714838+00:00 app[api]: Scaled to web@0:Basic by user marshbaydolphins@gmail.com

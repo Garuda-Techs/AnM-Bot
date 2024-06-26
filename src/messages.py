@@ -21,5 +21,5 @@ ADMIN_GUIDE = (
     '2\) Enter the pairing in the format `telehandle1,telehandle2`\n'
     '3\) Once done, save the file\n'
     '4\) Send the file to me and I\'ll process it\n\n'
-    'Do not that this will override any previous pairings\. Use /reset to clear the pairings and /reload to refresh the pairings from the last csv file\.'
+    'Do note that this will override any previous pairings. Use /reset to clear the pairings and /reload to refresh the pairings from the last csv file.'
 )

@@ -60,6 +60,22 @@ def loadPlayers(players: dict) -> str:
                 for doc in db.collection(dbName).where(u'username',u'==',playerName).stream(): 
                     player = doc.to_dict()
                     
+                try:
+                    players[playerName].username = playerName
+                    players[playerName].partner = players[partnerName]
+                    players[playerName].chat_id = player["chatId"]
+                    players[playerName].isAngel = True
+                # players[playerName].chat_id = player["chatId"] will throw an UnboundLocalError
+                # if a Firestore document wasn't assigned to player in the previous for loop
+                # This may occur when you use the /reload function while the bot is running.
+                # To handle this error, 
+                except UnboundLocalError:
+                    print(f'{playerName} could not be found in Firestore. \
+                        This likely means the Firestore Database is outdated. \
+                        Re-uploading CSV to Firestore...')
+                    upload_data_to_firestore()
+                    return loadPlayers()
+                    
                 players[playerName].username = playerName
                 players[playerName].partner = players[partnerName]
                 players[playerName].chat_id = player["chatId"]

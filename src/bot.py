@@ -24,9 +24,10 @@ players = defaultdict(player.Player)
 async def start_command(update: Update, context: CallbackContext) -> None:
     # Sends a message when the command /start is issued.
     playerName = update.message.chat.username.lower()
-    if players[playerName].username is None:
-        # Player not found/ registered.
+    if playerName not in players or players[playerName].username is None:
+        # Player not found/registered.
         await update.message.reply_text(messages.NOT_REGISTERED)
+        return  # Ensure we stop execution here
     # Registers chat id for message sending.
     players[playerName].setChatId(update.message.chat.id)
     logger.info(f'{playerName} started the bot with chat_id {players[playerName].chat_id}.')

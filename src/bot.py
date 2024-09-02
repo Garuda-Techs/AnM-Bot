@@ -26,8 +26,7 @@ async def start_command(update: Update, context: CallbackContext) -> None:
     playerName = update.message.chat.username.lower()
     if players[playerName].username is None:
         # Player not found/ registered.
-        update.message.reply_text(messages.NOT_REGISTERED)
-        return
+        await update.message.reply_text(messages.NOT_REGISTERED)
     # Registers chat id for message sending.
     players[playerName].setChatId(update.message.chat.id)
     logger.info(f'{playerName} started the bot with chat_id {players[playerName].chat_id}.')

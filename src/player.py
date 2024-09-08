@@ -29,15 +29,25 @@ class Player():
         self.chat_id = None
         self.isAngel = False
 
-    def setChatId(self,id):
+    def setChatId(self, id):
         self.chat_id = id
-        docs = db.collection(dbName).where(u'username',u'==',self.username).stream()
-        result = None
+        docs = db.collection(dbName).where('username', '==', self.username).stream()
+        
+        # Initialize indent to None
         indent = None
+        
+        # Assign indent only if the document exists
         for doc in docs:
             indent = db.collection(dbName).document(doc.id)
+        
+        # Check if indent is None (i.e., no matching document found)
+        if indent is None:
+            logger.error(f"No Firestore document found for username: {self.username}")
+            # raise ValueError(f"No Firestore document found for username: {self.username}")
+        
+        # Update Firestore document if found
         indent.update({
-            u'chatId' : id
+            'chatId': id
         })
 
 
@@ -57,7 +67,7 @@ def loadPlayers(players: dict) -> str:
                 playerName = row[0].strip().lower()
                 partnerName = row[1].strip().lower()
 
-                for doc in db.collection(dbName).where(u'username',u'==',playerName).stream(): 
+                for doc in db.collection(dbName).where('username','==',playerName).stream(): 
                     player = doc.to_dict()
                     
                 try:

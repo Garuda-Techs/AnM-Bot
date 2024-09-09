@@ -144,7 +144,7 @@ async def admin_command(update: Update, context: CallbackContext) -> None:
 
 async def upload_command(update: Update, context: CallbackContext) -> None:
     update.message.reply_text('Saved file.')
-    with open('./csv/pairings.csv', 'wb+') as csv_file:
+    with open('CSV_PATH', 'wb+') as csv_file:
         context.bot.get_file(update.message.document).download(out=csv_file)
     await reload_command(update, CallbackContext)
 

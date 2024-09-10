@@ -75,6 +75,11 @@ def loadPlayers(players: dict) -> str:
                     players[playerName].partner = players[partnerName]
                     players[playerName].chat_id = player["chatId"]
                     players[playerName].isAngel = True
+                    print(f"user: {players[playerName].username}")
+                    print(f"partner: {players[playerName].partner}")
+                    print(f"chat_id: {players[playerName].chat_id}")
+                    print(f"isAngel: {players[playerName].isAngel}")
+                    print()
                 # players[playerName].chat_id = player["chatId"] will throw an UnboundLocalError
                 # if a Firestore document wasn't assigned to player in the previous for loop
                 # This may occur when you use the /reload function while the bot is running.

@@ -84,7 +84,7 @@ def loadPlayers(players: dict) -> str:
                         This likely means the Firestore Database is outdated. \
                         Re-uploading CSV to Firestore...')
                     upload_data_to_firestore()
-                    return loadPlayers()
+                    return loadPlayers(players)
                     
                 players[playerName].username = playerName
                 players[playerName].partner = players[partnerName]

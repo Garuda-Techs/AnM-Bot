@@ -58,7 +58,7 @@ def upload_data_to_firestore():
     (None) -> None
     """
     db = initialise_firestore()
-    collection = 'pairings'
+    collection = 'DB_PATH'
     collection_ref = db.collection(collection)
     batch = db.batch()
     try:

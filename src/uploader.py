@@ -68,7 +68,7 @@ def upload_data_to_firestore():
     #     collection = 'pairings3'
     #     logger.info('Uploading to "pairings3" db...')
     db_path = os.getenv('DB_PATH')
-    collection = db.path
+    collection = db_path
     collection_ref = db.collection(collection)
     batch = db.batch()
     try:

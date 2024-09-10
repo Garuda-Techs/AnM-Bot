@@ -58,15 +58,17 @@ def upload_data_to_firestore():
     (None) -> None
     """
     db = initialise_firestore()
-    if os.getenv('DB_PATH') == 'pairings':
-        collection = 'pairings'
-        logger.info('Uploading to "pairings" db...')
-    elif os.getenv('DB_PATH') == 'pairings2':
-        collection = 'pairings2'
-        logger.info('Uploading to "pairings2" db...')
-    elif os.getenv('DB_PATH') == 'pairings3':
-        collection = 'pairings3'
-        logger.info('Uploading to "pairings3" db...')
+    # if os.getenv('DB_PATH') == 'pairings':
+    #     collection = 'pairings'
+    #     logger.info('Uploading to "pairings" db...')
+    # elif os.getenv('DB_PATH') == 'pairings2':
+    #     collection = 'pairings2'
+    #     logger.info('Uploading to "pairings2" db...')
+    # elif os.getenv('DB_PATH') == 'pairings3':
+    #     collection = 'pairings3'
+    #     logger.info('Uploading to "pairings3" db...')
+    db_path = os.getenv('DB_PATH')
+    collection = db.path
     collection_ref = db.collection(collection)
     batch = db.batch()
     try:

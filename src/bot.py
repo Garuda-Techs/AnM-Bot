@@ -176,7 +176,7 @@ def angelOrMortal(playerName, message) -> str:
 
 def main():
     BOT_TOKEN = os.environ['BOT_TOKEN']
-    WEBHOOK_URL = os.environ['WEBHOOK_URL']
+    # WEBHOOK_URL = os.environ['WEBHOOK_URL']
 
     logger.info(player.loadPlayers(players))
     # updater = Updater(BOT_TOKEN,use_context=True)

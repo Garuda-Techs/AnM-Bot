@@ -110,7 +110,8 @@ class GoogleSheetsManager:
                 username = record.get('Username', '').strip().lower()
                 partner_username = record.get('Partner_Username', '').strip().lower()
                 chat_id = record.get('ChatId', '')
-                is_angel = record.get('IsAngel')
+                raw_is_angel = record.get('IsAngel', False)
+                is_angel = self._to_bool(raw_is_angel)
                 
                 if username:  # Only process if username exists
                     # Create player with all attributes

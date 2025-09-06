@@ -8,7 +8,7 @@ HELP_TEXT = (
     '\n\nUse /help if you want to see this message again.'
 )
 ERROR_CHAT_ID = 'An error occurred! Please type /start again.'
-NOT_REGISTERED = 'Oops, we couldn\'t find your username in our records. If you had signed up for A&M and believe this is an error, please let the admins (@frymash, @Mart0ut, and @zozibo) know.'
+NOT_REGISTERED = 'Oops, we couldn\'t find your username in our records. If you had signed up for A&M and believe this is an error, please let the admins (@feng_wei or @kalent) know.'
 PARTNER_UNAVAILABLE_MORTAL = 'You have started the chat but your mortal has not joined.'
 PARTNER_UNAVAILABLE_ANGEL = 'You have started the chat but your angel has not joined.'
 PARTNER_AVAILABLE_MORTAL = 'You have joined the chat and are now chatting with your mortal.'

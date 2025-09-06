@@ -124,7 +124,7 @@ async def sendNonTextMessage(message, bot, chat_id, messageText) -> None:
 
 async def send_msg_command(update: Update, context: CallbackContext) -> None:
     playerName = update.message.chat.username.lower()
-    logger.info("send msg command" + players)
+    logger.info("send msg command" + str(players))
     if players[playerName].chat_id is None or players[playerName].partner.chat_id is None:
         logger.info("Failed here")
         return

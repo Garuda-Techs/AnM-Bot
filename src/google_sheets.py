@@ -118,7 +118,7 @@ class GoogleSheetsManager:
                     player_obj.username = username
                     player_obj.chat_id = int(chat_id) if chat_id else None
                     player_obj.isAngel = is_angel
-                    logger.info(player_obj.isAngel, is_angel)
+                    logger.info(str(player_obj.isAngel)+ str(is_angel.dtype()), +str(is_angel))
                     # Store partner username for later setup
                     player_obj.partner_username = partner_username
             

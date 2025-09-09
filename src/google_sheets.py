@@ -76,11 +76,6 @@ class GoogleSheetsManager:
             
             # upload data
             if data:
-                required_rows = len(data) + 1  # +1 since you're starting at A2
-                total_rows = self.sheet.row_count
-                if required_rows > total_rows:
-                rows_to_add = required_rows - total_rows
-                self.sheet.add_rows(rows_to_add)
                 self.sheet.update(f'A2:D{len(data)+1}', data)
                 logger.info(f"Saved {len(data)} players to Google Sheets")
                 return f"Saved {len(data)} players to Google Sheets successfully"
